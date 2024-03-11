@@ -1,0 +1,25 @@
+print("Bienvenue dans Python Pizza Delivery")
+
+taille = input("Quelle taille de pizza voulez-vous ? S, M, ou L ")
+add_pepperoni = input("Voulez-vous du pepperoni ? Y ou N ")
+extra_cheese = input("Voulez-vous du fromage supplémentaire ? Y ou N ")
+
+facture = 0
+
+if taille == "S":
+    facture += 15
+    if add_pepperoni == "Y":
+        facture += 2
+elif taille == "M":
+    facture += 20
+    if add_pepperoni == "Y":
+        facture += 3
+elif taille == "L":
+    facture += 25
+    if add_pepperoni == "Y":
+        facture += 3
+
+if extra_cheese == "Y":
+    facture += 1
+
+print(f"Votre facture finale est de : {facture} $.")
